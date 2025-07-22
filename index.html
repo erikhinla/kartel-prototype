@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Kartel: AI-powered creative production company. Human-led, AI-native solutions for brands, agencies, and productions." />
+  <meta name="keywords" content="AI Production, Creative Agency, AI Creative, Kartel, AI Masters" />
+  <meta name="author" content="Kartel" />
+  <title>Kartel Capabilities</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #000000;
+      --neon: #39FF14;
+      --text: #FFFFFF;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+    }
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 999;
+    }
+    header img {
+      width: 10vw;
+      max-width: 100px;
+    }
+    section {
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 100px 20px 60px;
+    }
+    .hero {
+      background: url('/assets/hero-bg.png') center/cover no-repeat;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 60px;
+      color: var(--neon);
+      font-weight: 700;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px var(--neon);
+    }
+    .hero h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .hero p {
+      font-size: 18px;
+      max-width: 600px;
+      margin: 0 auto 40px;
+    }
+    .cta-button {
+      background: var(--neon);
+      color: var(--text);
+      padding: 14px 28px;
+      border: none;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 6px;
+      box-shadow: 0 0 10px var(--neon);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .cta-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px var(--neon);
+    }
+    h2.section-title {
+      font-size: 48px;
+      color: var(--neon);
+      text-align: center;
+      margin-bottom: 40px;
+      text-shadow: 0 0 10px var(--neon);
+    }
+    .section-content {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      gap: 40px;
+      justify-content: center;
+      align-items: center;
+    }
+    .text-left {
+      flex: 1 1 60%;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    .text-left ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .text-left ul li {
+      margin-bottom: 12px;
+      position: relative;
+      padding-left: 28px;
+    }
+    .text-left ul li::before {
+      content: '\f058';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      color: var(--neon);
+    }
+    .diagram-right {
+      flex: 1 1 30%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .diagram-right img {
+      max-width: 100%;
+      height: auto;
+      filter: drop-shadow(0 0 10px var(--neon));
+    }
+    .accordion {
+      width: 100%;
+      max-width: 900px;
+    }
+    .accordion-item {
+      margin-bottom: 20px;
+      border: 1px solid var(--neon);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .accordion-header {
+      background: #111;
+      padding: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      color: var(--neon);
+    }
+    .accordion-content {
+      display: none;
+      background: #222;
+      padding: 16px;
+      color: var(--text);
+    }
+    .accordion-content.active {
+      display: block;
+    }
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 20px;
+    }
+    .carousel-item {
+      flex: 0 0 80%;
+      background: #111;
+      border-left: 4px solid var(--neon);
+      padding: 20px;
+      scroll-snap-align: center;
+      font-style: italic;
+      color: var(--text);
+    }
+    .carousel-item::before {
+      content: '“';
+      font-size: 48px;
+      color: var(--neon);
+      margin-right: 10px;
+    }
+    .vertical-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+    }
+    .vertical-card {
+      background: #111;
+      border: 1px solid var(--neon);
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 10px var(--neon);
+    }
+    .vertical-card h3 {
+      color: var(--neon);
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    .vertical-card p {
+      font-size: 16px;
+    }
+    footer {
+      background-color: #000;
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 16px;
+      color: #888;
+    }
+    footer a {
+      color: var(--neon);
+      margin: 0 10px;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    footer a:hover {
+      text-shadow: 0 0 10px var(--neon);
+    }
+  </style>
+</head>
+<body>
+  <!-- Previous sections remain unchanged -->
+
+  <section id="verticals" data-aos="fade-up">
+    <h2 class="section-title">Specialized Expertise Across Industries</h2>
+    <div class="vertical-grid">
+      <div class="vertical-card">
+        <h3>Brands</h3>
+        <p>Direct-to-brand creative services – identity, campaigns, content, launches.</p>
+      </div>
+      <div class="vertical-card">
+        <h3>Agencies</h3>
+        <p>White-label partnerships – overflow support, scalable AI production.</p>
+      </div>
+      <div class="vertical-card">
+        <h3>Post-Production</h3>
+        <p>AI-enhanced video workflows – editing, motion graphics, VFX.</p>
+      </div>
+      <div class="vertical-card">
+        <h3>Virtual & Hybrid</h3>
+        <p>Next-gen production – virtual sets, AI environments, hybrid experiences.</p>
+      </div>
+    </div>
+    <p style="text-align:center; margin-top: 40px; font-style: italic; font-size: 20px;">Each vertical backed by specialized AI Masters and proven workflows.</p>
+  </section>
+
+  <section id="vision" data-aos="fade-up">
+    <h2 class="section-title">AI Empowered Humans</h2>
+    <div class="section-content">
+      <div class="text-left">
+        <p><strong>Our Mission:</strong> To empower AI-native talent while bringing human performance and soul into AI workflows.</p>
+        <p><strong>Our Vision:</strong> A creative industry where the best of human creativity and AI work together seamlessly.</p>
+        <p><strong>What This Means:</strong></p>
+        <ul>
+          <li>For AI Masters: A platform to do their best work.</li>
+          <li>For Clients: Human creativity amplified by AI, not replaced.</li>
+          <li>For the Industry: Technology that serves creativity.</li>
+        </ul>
+        <p><strong>Core Values:</strong></p>
+        <ul>
+          <li>Human creativity leads, AI follows.</li>
+          <li>Quality over quantity, always.</li>
+          <li>Transparency in every interaction.</li>
+          <li>Innovation with purpose.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="why-kartel" data-aos="fade-up">
+    <h2 class="section-title">The Complete AI Production Solution</h2>
+    <div class="section-content">
+      <div class="text-left">
+        <p><strong>You Get:</strong></p>
+        <ul>
+          <li>✅ Access to top AI Masters without hiring overhead.</li>
+          <li>✅ Managed workflows that eliminate complexity.</li>
+          <li>✅ Professional results from day one.</li>
+          <li>✅ Scalable capacity for any project size.</li>
+          <li>✅ Transparent process with clear milestones.</li>
+        </ul>
+        <p><strong>You Avoid:</strong></p>
+        <ul>
+          <li>❌ Building internal AI expertise from scratch.</li>
+          <li>❌ Trial-and-error learning on client projects.</li>
+          <li>❌ Inconsistent quality from inexperienced AI users.</li>
+          <li>❌ Technology headaches and constant troubleshooting.</li>
+        </ul>
+        <p style="text-align:center; font-size: 20px; margin-top: 30px; font-style: italic;">The Result: Professional AI production capabilities without the complexity. Ready to see what's possible?</p>
+        <div style="text-align:center; margin-top: 20px;">
+          <a href="#contact" class="cta-button">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Existing footer -->
+  <footer id="contact">
+    <p>Ready to transform your creative process? <a href="#">Get in touch</a></p>
+    <img src="/assets/logo.png" alt="Kartel Logo" style="width: 80px; margin: 20px auto; display: block;" />
+    <p>&copy; 2025 Kartel. <a href="#">Home</a> | <a href="#">Contact</a> | <a href="#">Privacy</a></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+    const accordions = document.querySelectorAll('.accordion-header');
+    accordions.forEach(header => {
+      header.addEventListener('click', () => {
+        const content = header.nextElementSibling;
+        content.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>
